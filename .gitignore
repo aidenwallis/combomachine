@@ -1,0 +1,6 @@
+dist
+npm-error.log
+yarn-error.log
+.cache/
+node_modules/
+.DS_Store

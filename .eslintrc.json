@@ -1,0 +1,44 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "airbnb"],
+  "rules": {
+    "max-len": [1, 140, 2, { "ignoreComments": true }],
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "no-restricted-globals": "off",
+    "no-console": "off",
+
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "prefer-destructuring": "off",
+
+    "jsx-a11y/no-autofocus": "warn",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "jsx-a11y/anchor-is-valid": ["error", { "components": ["Link"], "aspects": ["invalidHref"] }]
+  },
+  "plugins": ["jest"],
+  "globals": {
+    "amplitude": true
+  },
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

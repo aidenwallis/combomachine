@@ -1,0 +1,8 @@
+{
+  "config_notes": [
+    "I'm fine with leaving this in the repo, we don't do any authed reqs on helix",
+    "are ratelimited by IP and is public, so feel free to use. If you exceed the",
+    "ratelimit on your IP everyone else will be unaffected. So SeemsGood"
+  ],
+  "clientId": "2dstuqdo7qzb3yx94uxqpnmcsudrlh"
+}

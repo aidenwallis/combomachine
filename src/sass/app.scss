@@ -1,0 +1,71 @@
+@import '~node_modules/normalize.css/normalize';
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1b1d20;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.emoji {
+  height: 20px;
+}
+
+.chat-line-emote, .emoji {
+  margin: -.5rem 0;
+  vertical-align: middle;
+}
+
+.chat-line {
+  padding: 6px 0;
+  &-badge {
+    margin-bottom: -5px;
+    margin-right: 3px;
+  }
+  &-cheer-amount {
+    font-weight: 600;
+    margin-left: 5px;
+  }
+  &-name {
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 4px;
+  }
+}
+
+.chat-line-combo {
+  &-counter {
+    margin-left: 6px;
+    font-weight: 700;
+    margin-right: 6px;
+    &-multiplier {
+      font-size: 1.3rem;
+      display: inline-block;
+      &-animated {
+        animation: counterIncrease .1s linear;
+      }
+    }
+  }
+}
+
+@keyframes counterIncrease {
+  from {
+    transform: scale(1.5);
+    color: #ff0000;
+  }
+  to {
+    transform: scale(1);
+    color: #fff;
+  }
+}
