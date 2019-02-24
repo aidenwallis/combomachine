@@ -37,7 +37,7 @@ class ThirdPartyService {
   static getGlobalBttvEmotes() {
     return req.get('https://api.betterttv.net/2/emotes')
       .then((res) => {
-        return res.reduce((acc, cur) => {
+        return res.emotes.reduce((acc, cur) => {
           acc[cur.code] = res.urlTemplate.replace('{{id}}', cur.id).replace('{{image}}', '1x');
           return acc;
         }, {});
