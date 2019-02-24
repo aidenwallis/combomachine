@@ -84,10 +84,11 @@
     </form>
   </div>
   <script>
-      document.getElementById('form').onsubmit = function() {
-        var username = document.getElementById('text').value;
-        alert(`To get started add https://combomachine.aidenwallis.co.uk/${username} as a browser source to your OBS, width a width of 500 and a height of 300`);
-      };
+    document.getElementById('form').onsubmit = function(e) {
+      e.preventDefault();
+      var username = document.getElementById('text').value;
+      alert(`To get started add https://combomachine.aidenwallis.co.uk/${username} as a browser source to your OBS, width a width of 500 and a height of 300`);
+    };
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135013999-1"></script>
