@@ -59,6 +59,10 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes counterIncrease {
   from {
     transform: scale(1.5);
