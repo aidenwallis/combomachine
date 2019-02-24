@@ -42,7 +42,10 @@ class ThirdPartyService {
           return acc;
         }, {});
       })
-      .catch(() => ({}));
+      .catch(e => {
+        console.error(e);
+        return {};
+      });
   }
 
   static getChannelBttvEmotes(channel) {
