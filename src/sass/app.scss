@@ -29,9 +29,10 @@ body {
 
 .chat-line {
   padding: 6px 0;
+  font-size: 20px;
   &-badge {
     margin-bottom: -5px;
-    margin-right: 3px;
+    margin-right: 5px;
   }
   &-cheer-amount {
     font-weight: 600;
@@ -43,7 +44,7 @@ body {
     margin-right: 4px;
   }
   &-text {
-    text-shadow: 0 1px 2px rgba(#000, .6);
+    text-shadow: 0 1px 1px rgba(#000, .8);
   }
 }
 
