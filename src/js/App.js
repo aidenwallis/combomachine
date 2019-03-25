@@ -115,7 +115,7 @@ class App {
         this.lines.shift();
       }
     }
-    this.node.scrollTop = this.node.scrollHeight;
+    this.node.scrollTop = this.node.scrollHeight * 2;
   }
 
   _newClearchat(message) {
