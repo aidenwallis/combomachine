@@ -23,6 +23,7 @@ class ChatLine {
 
     // For removing messages with CLEARCHAT
     this.senderId = this.message.tags['user-id'];
+    this.msgId = this.message.tags['id'];
 
     const action = actionRx.exec(message.params[1]);
     this.text = action ? action[1] : message.params[1];

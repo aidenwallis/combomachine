@@ -10,7 +10,8 @@ class App {
     this.emotes = {};
     this.connection = new TwitchIRCConnection();
     this.connection.on('PRIVMSG', (m) => this._newMessage(m));
-    this.connection.on('CLEARCHAT', m => this._newClearchat(m));
+    this.connection.on('CLEARCHAT', (m) => this._newClearchat(m));
+    this.connection.on('CLEARMSG', (m) => this._newClearmsg(m));
 
     this.currentEmotes = null;
     this.currentCombo = null;
@@ -127,6 +128,17 @@ class App {
         continue;
       }
       ++i;
+    }
+  }
+
+  _newClearmsg(message) {
+    for (let i = 0; i < this.lines.length; ++i) {
+      const line = this.lines[i];
+      if (line.msgId === message.tags['target-msg-id']) {
+        line.getNode().remove();
+        this.lines.splice(i, 1);
+        return;
+      }
     }
   }
 }
