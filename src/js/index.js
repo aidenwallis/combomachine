@@ -9,7 +9,7 @@ if (!path[0]) {
 
 const query = {};
 if (window.location.search && window.location.search.length && window.location.search[0] === '?') {
-  const items = path[1].substring(1).split('&');
+  const items = window.location.search.substring(1).split('&');
   for (let i = 0; i < items.length; ++i) {
     const [name, value] = items[i].split('=');
     query[name] = value ? decodeURIComponent(value) : null;
