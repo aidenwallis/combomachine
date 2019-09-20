@@ -22,7 +22,13 @@ class App {
     this.lines = [];
   }
 
-  start(channelName) {
+  start(channelName, params = {}) {
+    if (params.padding) {
+      document.body.style.padding = params.padding;
+    }
+    if (params.fontSize) {
+      document.body.style.fontSize = params.fontSize;
+    }
     return TwitchService.getChannel(channelName)
       .then((channel) => {
         if (!channel) {
@@ -36,7 +42,6 @@ class App {
       })
       .then(() => {
         this.connection.connect();
-
       }).catch(e => console.error(e));
   }
 

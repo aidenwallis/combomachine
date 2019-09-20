@@ -9,6 +9,7 @@ body {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  font-size: 22px;
 }
 
 #app {
@@ -28,7 +29,6 @@ body {
 
 .chat-line {
   padding: 6px 0;
-  font-size: 22px;
   font-weight: 700;
   text-shadow: 0 0 1px #000, 0 0 2px #000;
   &-badge {
@@ -54,9 +54,6 @@ body {
   &:after {
     clear: both;
   }
-  // &-text {
-
-  // }
 }
 
 .chat-line-combo {
