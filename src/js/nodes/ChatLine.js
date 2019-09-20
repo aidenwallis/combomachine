@@ -132,8 +132,6 @@ class ChatLine {
     this.comboCounterMultiplierNode.classList.remove('chat-line-combo-counter-multiplier-animated');
     void this.comboCounterMultiplierNode.offsetWidth;
     this.comboCounterMultiplierNode.classList.add('chat-line-combo-counter-multiplier-animated');
-
-    console.log('Combo detected!');
   }
 
   _addBadges() {
