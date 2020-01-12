@@ -41,6 +41,7 @@ body {
   }
   &-name {
     font-weight: 700;
+    color: #888;
     display: inline-block;
     margin-right: 4px;
   }
@@ -53,6 +54,9 @@ body {
   }
   &:after {
     clear: both;
+  }
+  &-text {
+    word-wrap: break-word;
   }
 }
 
