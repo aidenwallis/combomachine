@@ -37,7 +37,7 @@ class App {
         return channel;
       })
       .then((channel) => {
-        this.connection.setChannel(channel.login);
+        this.connection.setChannel(channel.name);
         return this._fetchData(channel);
       })
       .then(() => {
@@ -47,9 +47,9 @@ class App {
 
   _fetchData(channel) {
     return Promise.all([
-      TwitchService.getBadges(channel.id),
-      TwitchService.getCheermotes(channel.id),
-      ThirdPartyService.getEmotes(channel.login, channel.id),
+      TwitchService.getBadges(channel._id),
+      TwitchService.getCheermotes(channel._id),
+      ThirdPartyService.getEmotes(channel.name, channel._id),
     ]).then(([badges, cheermotes, emotes]) => {
       this.badges = badges;
       this.cheermotes = cheermotes;
