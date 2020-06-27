@@ -38,7 +38,7 @@ class TwitchService {
   }
 
   static getChannel(login) {
-    return krakenReq.get(`users?logins=${encodeURIComponent(login)}`)
+    return krakenReq.get(`users?login=${encodeURIComponent(login)}`)
       .then((res) => res.users && res.users[0] ? res.users[0] : null)
       .catch(() => null);
   }
