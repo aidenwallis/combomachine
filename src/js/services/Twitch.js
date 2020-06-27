@@ -19,15 +19,6 @@ const krakenReq = new Request({
   },
 });
 
-const helixReq = new Request({
-  baseUrl: 'https://api.twitch.tv/helix/',
-  json: true,
-  headers: {
-    Accept: 'application/json',
-    'Client-ID': config.clientId,
-  },
-});
-
 class TwitchService {
   static getGlobalBadges() {
     return TwitchService._badgeRequest('global');
@@ -47,8 +38,8 @@ class TwitchService {
   }
 
   static getChannel(login) {
-    return helixReq.get('users', {login})
-      .then((res) => res.data && res.data[0] ? res.data[0] : null)
+    return krakenReq.get(`users?logins=${encodeURIComponent(login)}`)
+      .then((res) => res.users && res.users[0] ? res.users[0] : null)
       .catch(() => null);
   }
 
